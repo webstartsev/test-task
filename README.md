@@ -4,3 +4,6 @@
 
 Используется:
 -  нативный JS
+
+
+DEMO (https://webstartsev.github.io/test-task/)
