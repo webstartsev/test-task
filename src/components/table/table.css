@@ -1,0 +1,30 @@
+.table-users {
+  min-width: 800px;
+}
+
+.table-users__head {
+  display: flex;
+  padding: 0.5rem 1rem;
+  background: #2980b9;
+  color: #fff;
+}
+
+.table-users__head .table-users__td {
+  font-size: 2rem;
+}
+
+.table-users__td {
+  min-width: 250px;
+}
+
+.table-users__td_type_id {
+  min-width: 50px;
+}
+
+.table-users__td_type_balance {
+  min-width: 110px;
+}
+
+.table-users__td_type_active {
+  min-width: 50px;
+}
