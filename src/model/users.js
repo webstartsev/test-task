@@ -1,9 +1,10 @@
 import {FilterType} from '../const';
 import {getUsersByFilters} from '../utils/filters';
+import users from '../mock/users.json';
 
 export default class UsersModel {
   constructor() {
-    this._users = [];
+    this._users = users;
     this._activeFilterType = FilterType.ALL;
 
     this._filterChangeHandlers = [];
