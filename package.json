@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --open"
+    "dev": "webpack-dev-server --open",
+    "deploy": "npm run build && npx gulp deploy"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +13,7 @@
   "devDependencies": {
     "css-loader": "^3.5.2",
     "gh-pages": "^2.2.0",
+    "gulp": "^4.0.2",
     "json-loader": "^0.5.7",
     "style-loader": "^1.1.4",
     "webpack": "4.42.1",
