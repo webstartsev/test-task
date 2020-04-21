@@ -22,7 +22,7 @@ export default class PageController {
   }
 
   render(isLoadingData = false) {
-    this._users = this._usersModel.getUsers();
+    this._users = this._usersModel.prepearUsers(this._usersModel.getUsers());
     if (isLoadingData) {
       render(this._container, this._loaderComponent);
       return;
@@ -42,7 +42,7 @@ export default class PageController {
   }
 
   _updateUsers() {
-    const users = this._usersModel.getUsers();
+    const users = this._usersModel.prepearUsers(this._usersModel.getUsers());
     this._removeUsers();
     this._renderUsers(this._usersListContainer, users);
   }

@@ -37,6 +37,26 @@ export default class UsersModel {
     this._dataChangeHandler.push(handler);
   }
 
+  prepearUsers(users) {
+    const copyUsers = [...users];
+    const references = {};
+
+    copyUsers.forEach(function (user) {
+      references[user.id] = user;
+      user.children = [];
+    });
+
+    for (let i = 0; i < copyUsers.length; i++) {
+      const user = copyUsers[i];
+      if (user.parentId !== 0 && references.hasOwnProperty(user.parentId)) {
+        references[user.parentId].children.push(copyUsers.splice(i, 1)[0]);
+        i--;
+      }
+    }
+
+    return copyUsers;
+  }
+
   _callHandlers(handlers) {
     handlers.forEach(handler => handler());
   }

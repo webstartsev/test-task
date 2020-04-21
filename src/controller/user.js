@@ -11,6 +11,8 @@ export default class UserController {
   render(user) {
     this._userComponent = new UserComponent(user);
     render(this._container, this._userComponent);
+
+    this._userComponent.setClickParentHandler();
   }
 
   destroy() {
