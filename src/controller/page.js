@@ -17,8 +17,10 @@ export default class PageController {
     this._filterController = new FilterController(this._container, this._usersModel);
 
     this._onFilterChange = this._onFilterChange.bind(this);
+    this.render = this.render.bind(this);
 
     this._usersModel.setFilterChangeHandler(this._onFilterChange);
+    this._usersModel.setDataChangeHandler(this.render);
   }
 
   render(isLoadingData = false) {
